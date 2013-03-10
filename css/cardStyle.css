@@ -1,0 +1,22 @@
+html {
+    background-color: #FFFFFF;
+}
+
+#card {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#english td {
+    text-align:center;
+}
+
+#pinyin td {
+    text-align:center;
+}
+
+#chinese {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}

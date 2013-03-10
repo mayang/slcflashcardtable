@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scores</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                loadTable();
+            });
+            // temp array of names
+            var students = ['John C', 'Sarah P', 'Jacob S', 'Sam S', 'Marybeth P', 'Cheryl Y', 'Johnny C', 'Joe M', 'Consuelo P' ];
+        
+            function loadTable() {
+                $.each(students, function(index, value) {
+                    var studentRow = '<tr id="' + value + '" ><td class="name">' + value + '</td>';
+                    studentRow += "<td class='zero'>0</td> <td class='one'>0</td> <td class='two' >0</td><td class='three'>0</td><td class='four'>0</td><td class='five'>0</td><td class='six'>0</td><td class='seven'>0</td><td class='eight'>0</td><td class='nine'>0</td></tr>"
+                    //$(studentRow).appendTo('#scores');
+                    $('#scores tr').last().before(studentRow)
+                });
+            }
+        </script>
+        
+    </head>
+    <body>
+        <table id='scores' border=1> <!-- 11 x 11 -->
+            <tr id='header'>
+                <th>Student</th>
+                <td class='zero'></td>
+                <td class='one'></td>
+                <td class='two'></td>
+                <td class='three'></td>
+                <td class='four'> </td>
+                <td class='five'> </td>
+                <td class='six'> </td>
+                <td class='seven'> </td>
+                <td class='eight'> </td>
+                <td class='nine'> </td>
+            </tr>
+            <!-- javascript add row pwer student -->
+            <tr id='words'>
+                <th>Words</th>
+                <td class='zero'><img src='images/apple.jpg'/> </td>
+                <td class='one'><img src='images/bananna.jpg'/></td>
+                <td class='two' ><img src='images/kiwi.jpg'/></td>
+                <td class='three'><img src='images/orange.jpg'/></td>
+                <td class='four'><img src='images/pear.jpg'/></td>
+                <td class='five'><img src='images/pineapple.jpg'/></td>
+                <td class='six'><img src='images/plum.jpg'/></td>
+                <td class='seven'><img src='images/pomegranet.jpg'/></td>
+                <td class='eight'><img src='images/strawberry.jpg'/></td>
+                <td class='nine'><img src='images/tomato.jpg'/></td>   
+            </tr>
+            
+        </table>
+    </body>
+</html>
